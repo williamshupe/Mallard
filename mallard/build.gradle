@@ -1,0 +1,95 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
+
+def mallardVersion = '0.1.20170807-SNAPSHOT'
+def dokkaVersion = '0.9.15'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+publishing {
+    publications {
+        mallardLib(MavenPublication) {
+
+            groupId 'com.tealdrones'
+            artifactId 'mallard'
+            version mallardVersion
+            pom.withXml {
+                asNode().appendNode('name', 'Mallard Library')
+                asNode().appendNode('description', 'WebDav Library for Android')
+            }
+            artifact("$buildDir/outputs/aar/mallard-release.aar")
+        }
+    }
+    repositories {
+        maven {
+            def repoId = 'releases'
+            if (mallardVersion.endsWith('-SNAPSHOT')) {
+                repoId = 'snapshots'
+            }
+            url "http://archiva.tealoffice/repository/${repoId}/"
+
+            // Create file 'gradle-local.properties' and define the username and password there
+            credentials {
+                username = project.hasProperty('tealSdkAdminUsername') ? tealSdkAdminUsername : ''
+                password = project.hasProperty('tealSdkAdminPassword') ? tealSdkAdminPassword : ''
+            }
+        }
+    }
+}
+buildscript {
+    ext.kotlin_version = '1.1.3'
+    ext.dokka_version = '0.9.15'
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${dokka_version}"
+    }
+}
+apply plugin: 'org.jetbrains.dokka'
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "$buildDir/javadoc"
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'org.jsoup:jsoup:1.10.2'
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

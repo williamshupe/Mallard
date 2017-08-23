@@ -1,7 +1,7 @@
-package com.teal.mallard.model
+package com.tealdrones.mallard.model
 
-import com.teal.mallard.controller.OnErrorListener
-import com.teal.mallard.controller.OnResponseListener
+import com.tealdrones.mallard.controller.OnErrorListener
+import com.tealdrones.mallard.controller.OnResponseListener
 
 /**
  * Created by kodyvanry on 7/26/17

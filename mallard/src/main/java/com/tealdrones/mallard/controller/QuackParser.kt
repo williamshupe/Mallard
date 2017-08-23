@@ -1,6 +1,6 @@
-package com.teal.mallard.controller
+package com.tealdrones.mallard.controller
 
-import com.teal.mallard.model.Duck
+import com.tealdrones.mallard.model.Duck
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element

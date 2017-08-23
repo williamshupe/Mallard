@@ -1,4 +1,4 @@
-package com.teal.mallard;
+package com.tealdrones.mallard;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.teal.mallard.test", appContext.getPackageName());
+        assertEquals("com.tealdrones.mallard.test", appContext.getPackageName());
     }
 }

@@ -1,10 +1,10 @@
-package com.teal.mallard
+package com.tealdrones.mallard
 
-import com.teal.mallard.controller.OnErrorListener
-import com.teal.mallard.controller.OnResponseListener
-import com.teal.mallard.controller.Quacker
-import com.teal.mallard.model.DeleteIncubator
-import com.teal.mallard.model.Propfind
+import com.tealdrones.mallard.controller.OnErrorListener
+import com.tealdrones.mallard.controller.OnResponseListener
+import com.tealdrones.mallard.controller.Quacker
+import com.tealdrones.mallard.model.DeleteIncubator
+import com.tealdrones.mallard.model.Propfind
 
 /**
  * Created by kodyvanry on 7/26/17
@@ -49,7 +49,12 @@ class Mallard {
 
     companion object {
 
-        @JvmStatic val instance by lazy { Mallard() }
+        @JvmStatic var _instance : Mallard? = null
+        @JvmStatic val instance: Mallard
+            get() {
+                _instance = _instance ?: Mallard()
+                return _instance!!
+            }
 
     }
 

@@ -1,6 +1,6 @@
-package com.teal.mallard.model
+package com.tealdrones.mallard.model
 
-import com.teal.mallard.controller.QuackParser
+import com.tealdrones.mallard.controller.QuackParser
 import okhttp3.Response
 
 /**

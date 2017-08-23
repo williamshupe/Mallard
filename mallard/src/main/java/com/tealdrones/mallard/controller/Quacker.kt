@@ -1,9 +1,9 @@
-package com.teal.mallard.controller
+package com.tealdrones.mallard.controller
 
 import android.util.Log
-import com.teal.mallard.model.Quack
-import com.teal.mallard.model.QuackErrorResponse
-import com.teal.mallard.model.QuackResponse
+import com.tealdrones.mallard.model.Quack
+import com.tealdrones.mallard.model.QuackErrorResponse
+import com.tealdrones.mallard.model.QuackResponse
 import okhttp3.*
 import java.io.IOException
 import java.lang.ref.WeakReference

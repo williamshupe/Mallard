@@ -1,4 +1,4 @@
-package com.teal.mallard.model
+package com.tealdrones.mallard.model
 
 /**
  * Created by kodyvanry on 8/7/17

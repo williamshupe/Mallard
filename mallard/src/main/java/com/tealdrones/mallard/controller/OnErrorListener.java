@@ -1,6 +1,6 @@
-package com.teal.mallard.controller;
+package com.tealdrones.mallard.controller;
 
-import com.teal.mallard.model.QuackErrorResponse;
+import com.tealdrones.mallard.model.QuackErrorResponse;
 
 /**
  * Created by kodyvanry on 8/16/17

@@ -1,6 +1,6 @@
-package com.teal.mallard.model
+package com.tealdrones.mallard.model
 
-import com.teal.mallard.Mallard
+import com.tealdrones.mallard.Mallard
 
 /**
  * Created by kodyvanry on 8/16/17

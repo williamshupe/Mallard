@@ -4,15 +4,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.teal.mallard.Mallard;
-import com.teal.mallard.controller.OnErrorListener;
-import com.teal.mallard.controller.OnResponseListener;
-import com.teal.mallard.controller.Quacker;
-import com.teal.mallard.model.Propfind;
-import com.teal.mallard.model.PropfindIncubator;
-import com.teal.mallard.model.Quack;
-import com.teal.mallard.model.QuackErrorResponse;
-import com.teal.mallard.model.QuackResponse;
+import com.tealdrones.mallard.Mallard;
+import com.tealdrones.mallard.controller.OnErrorListener;
+import com.tealdrones.mallard.controller.OnResponseListener;
+import com.tealdrones.mallard.controller.Quacker;
+import com.tealdrones.mallard.model.PropfindIncubator;
+import com.tealdrones.mallard.model.Quack;
+import com.tealdrones.mallard.model.QuackErrorResponse;
+import com.tealdrones.mallard.model.QuackResponse;
+
 
 public class MainActivity extends AppCompatActivity implements OnErrorListener, OnResponseListener {
 

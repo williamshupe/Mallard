@@ -1,4 +1,4 @@
-package com.teal.tealmallard;
+package com.tealdrones.tealmallard;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements OnErrorListener, 
         setContentView(R.layout.activity_main);
 
         Mallard mallard = Mallard.getInstance();
-        mallard.setUrl("http://10.73.41.178");
+        mallard.setUrl("http://10.73.41.98");
         Quacker quacker = new Quacker();
         Quack propfind = new PropfindIncubator(mallard, "flight").hatch();
         propfind.setOnResponseListener(this);

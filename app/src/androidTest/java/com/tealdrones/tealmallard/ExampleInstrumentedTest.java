@@ -1,4 +1,4 @@
-package com.teal.tealmallard;
+package com.tealdrones.tealmallard;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

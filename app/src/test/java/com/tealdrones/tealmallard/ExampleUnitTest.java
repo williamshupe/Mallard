@@ -1,4 +1,4 @@
-package com.teal.tealmallard;
+package com.tealdrones.tealmallard;
 
 import org.junit.Test;
 

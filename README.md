@@ -4,9 +4,9 @@
 
 Mallard is a WebDav library aimed at being simple to use.
 Mallard currently supports these WebDAV request methods:
-* `PROPFIND` - use `Mallard.propfind()` is used to retrieve a list of files and directories 
+* `PROPFIND` - use `Mallard.propfind()` to retrieve a list of files and directories 
                from a WebDAV server.
-* `DELETE` - use `Mallard.delete()` is used to delete a resource from a WebDAV server.
+* `DELETE` - use `Mallard.delete()` to delete a resource from a WebDAV server.
 
 ## Example Usage
 ```java

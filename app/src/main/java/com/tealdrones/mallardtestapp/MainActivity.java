@@ -1,10 +1,11 @@
-package com.tealdrones.mallard;
+package com.tealdrones.mallardtestapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.tealdrones.mallard.Mallard;
 import com.tealdrones.mallard.communication.Depth;
 import com.tealdrones.mallard.communication.OnDeleteRequestCompleteListener;
 import com.tealdrones.mallard.communication.OnPropfindRequestCompleteListener;
